@@ -1,8 +1,8 @@
 @import 'header';
 @import 'variables';
 @import 'mixins';
-@import 'hero';
-@import 'about';
+@import 'main';
+@import 'services';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -17,6 +17,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    min-height: 900vh;
 }
 
 

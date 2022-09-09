@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 .nav {
   position: fixed;
-  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 99;
 }
 @media screen and (max-width: 991px) {
   .nav {
@@ -34,7 +35,7 @@
 }
 @media screen and (max-width: 991px) {
   .nav__logo {
-    margin-left: 2.5rem;
+    margin-left: 2rem;
   }
 }
 .nav__menu {
@@ -45,7 +46,7 @@
 @media screen and (max-width: 991px) {
   .nav__menu {
     display: block;
-    margin-right: 2.5rem;
+    margin-right: 2rem;
     cursor: pointer;
   }
 }
@@ -60,6 +61,7 @@
 .nav__links {
   display: flex;
   transition: all 0.3s ease-in-out;
+  z-index: 99;
 }
 @media screen and (max-width: 991px) {
   .nav__links {
@@ -135,6 +137,179 @@
   border: 1px solid #FFF;
 }
 
+.main {
+  background-color: #333;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+.main .hah {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+  top: 4.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.lamabitch {
+  background-color: aqua;
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+  background-color: #125f59 !important;
+  position: relative;
+  top: 4.5rem;
+  overflow: hidden;
+}
+.main .container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+@media screen and (max-width: 991px) {
+  .main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.main .container .text {
+  width: 70%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .container .text h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #FEA82F;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .main .container .text h3 {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+}
+.main .container .text h1 {
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFF;
+}
+@media screen and (max-width: 1200px) {
+  .main .container .text h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main .container .text h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .main .container .text h1 {
+    font-size: 1.5rem;
+  }
+}
+.main .container .text .ana {
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .main .container .text .ana {
+    margin-bottom: 1.3rem;
+  }
+}
+.main .container .text p {
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .main .container .text p {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main .container .text p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .main .container .text p {
+    font-size: 0.9rem;
+  }
+}
+.main .container .text .button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+@media screen and (max-width: 991px) {
+  .main .container .text .button {
+    justify-content: center;
+  }
+}
+.main .container .text .button a {
+  color: #111;
+  background-color: #FFF;
+  padding: 14px 50px;
+  border-radius: 0px 50px 50px 30px;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+  .main .container .text .button a {
+    padding: 12px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main .container .text .button a {
+    padding: 10px 20px;
+  }
+}
+.main .container .text .button a:hover {
+  background-color: transparent;
+  color: #FFF;
+  border: 2px solid #FFF;
+}
+.main .container .image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .main .container .image {
+    display: none;
+  }
+}
+.main .container .image img {
+  max-width: 100%;
+}
+
+.services {
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+  background-color: #FFF;
+  border: 1px solid red;
+  position: relative;
+  top: 4.5rem;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
@@ -145,6 +320,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  min-height: 900vh;
 }
 
 a {
