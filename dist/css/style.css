@@ -308,14 +308,6 @@
   top: 4.5rem;
   overflow: hidden;
 }
-.services .box {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-}
 .services .box .container {
   width: 80%;
   margin: 0 auto;
@@ -393,6 +385,47 @@
   background-color: #27AE60;
 }
 
+.skills {
+  width: 100%;
+  position: relative;
+  top: 4.5rem;
+  overflow: hidden;
+}
+.skills .box .container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .skills .box .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skills .box .container {
+    grid-template-columns: 1fr;
+  }
+}
+.skills .box .container .skills__card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.skills .box .container .skills__card .image img {
+  max-width: 100%;
+}
+.skills .box .container .skills__card .description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.skills .box .container .skills__card .description h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
@@ -445,4 +478,13 @@ li {
 .title .main-title:hover {
   background-color: rgba(18, 95, 89, 0.7);
   cursor: default;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
 }/*# sourceMappingURL=style.css.map */

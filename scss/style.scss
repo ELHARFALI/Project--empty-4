@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'main';
 @import 'services';
+@import 'skills';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -62,3 +63,13 @@ li {
             }
         }
     }
+
+
+.box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
