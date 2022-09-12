@@ -19,10 +19,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    min-height: 900vh;
-}
-
 
 a {
     text-decoration: none;
@@ -39,3 +35,30 @@ li {
     margin-right: auto;
 }
 
+.title {
+        width: 20%;
+        margin: auto ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main-title {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.8rem;
+            padding: 8px 20px;
+            background-color: $mainColor;
+            color: $white;
+            border-radius: 20px;
+            transition: all 0.2s ease-in-out;
+
+            @include mobile {
+                font-size: 1.4rem;
+            }
+
+            &:hover {
+                background-color: rgba(18, 95, 89, 0.7);
+                cursor: default;
+            }
+        }
+    }

@@ -1,12 +1,108 @@
 @import 'mixins';
 
 .services {
-    width: 100%;
-    height: calc(100vh - 4.5rem);
     background-color: $white;
-    border: 1px solid red;
+    width: 100%;
+    // height: calc(100vh - 4.5rem);
+    // min-height: 100%;
     position: relative;
     top: 4.5rem;
+    overflow: hidden;
 
     
+
+    .box {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+
+            @include large-screen {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                border: 2px solid $mainColor;
+                border-radius: 10px;
+                overflow: hidden;
+                transition: $main-transition;
+
+                &:hover {
+                    transform: scale(1.025);
+                }
+
+                .image {
+
+                    img {
+                        max-width: 100%
+                    }
+                }
+
+                .description {
+                    padding: 20px;
+
+                    h2 {
+                        font-size: 1.7rem;
+                        color: $navBar;
+                        margin-bottom: 1rem;
+                    }
+
+                    h3 {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: $gold;
+                        margin-bottom: 0.6rem;
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                        color: #888;
+                        margin-bottom: 1rem;
+                        line-height: 1.7;
+
+                        @include large-screen {
+                            max-height: 300px;
+                            overflow: hidden;
+                        }
+
+                        @include small-mobile {
+                            max-height: 150px;
+                        }
+                    }
+
+                    .link__container {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        a {
+                            background-color: $navBar;
+                            padding: 8px 16px;
+                            border-radius: 8px;
+                            color: $white;
+                            transition: $main-transition;
+
+                            &:hover {
+                                background-color: #27AE60;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
