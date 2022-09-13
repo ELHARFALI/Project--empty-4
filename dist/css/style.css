@@ -426,6 +426,122 @@
   margin-bottom: 0.5rem;
 }
 
+.contact {
+  width: 100%;
+  position: relative;
+  top: 4.5rem;
+  overflow: hidden;
+}
+.contact .container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #e7e9eb;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+}
+.contact .container .flex {
+  margin: 5rem 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .contact .container .flex {
+    grid-template-columns: 1fr;
+  }
+}
+.contact .container .flex .image {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .contact .container .flex .image {
+    display: none;
+  }
+}
+.contact .container .flex .image img {
+  max-width: 100%;
+}
+.contact .container .flex form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact .container .flex form label {
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 599px) {
+  .contact .container .flex form label {
+    font-size: 1rem;
+  }
+}
+.contact .container .flex form input {
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  text-indent: 10px;
+  border-radius: 10px;
+  height: 2.5rem;
+}
+@media screen and (max-width: 599px) {
+  .contact .container .flex form input {
+    margin-bottom: 0.5rem;
+    height: 1.8rem;
+    max-width: 80%;
+  }
+}
+.contact .container .flex form input:focus {
+  border: 2px groove #FEA82F;
+}
+.contact .container .flex form textarea {
+  border: none;
+  outline: none;
+  text-indent: 10px;
+  border-radius: 10px;
+  height: 5rem;
+  margin-bottom: 1.2rem;
+}
+@media screen and (max-width: 599px) {
+  .contact .container .flex form textarea {
+    height: 6rem;
+    max-width: 80%;
+  }
+}
+.contact .container .flex form textarea:focus {
+  border: 2px groove #FEA82F;
+}
+.contact .container .flex form .btn-sbm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 599px) {
+  .contact .container .flex form .btn-sbm {
+    max-width: 80%;
+  }
+}
+.contact .container .flex form .btn-sbm .btn-submit {
+  background-color: #196660;
+  width: 50%;
+  color: #FFF;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.contact .container .flex form .btn-sbm .btn-submit:hover {
+  background-color: transparent;
+  color: #111;
+  border: 2px solid #196660;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
